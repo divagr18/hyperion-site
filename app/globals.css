@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hyperion-bg: #030303;
+  --color-hyperion-surface: rgba(255, 255, 255, 0.02);
+  --color-hyperion-border: rgba(255, 255, 255, 0.05);
+  --color-hyperion-primary: #8b5cf6;
+  /* Violet */
+  --color-hyperion-secondary: #6366f1;
+  /* Indigo */
+  --color-hyperion-accent: #f43f5e;
+  /* Rose */
+
+  --animate-shimmer: shimmer 8s infinite linear;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-prism: prism 5s infinite linear;
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes prism {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+p,
+span,
+div {
+  font-weight: 400;
+}
+
+/* Obsidian Premium Glass */
+.glass-premium {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.glass-premium:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* High-Fidelity Gradients */
+.mesh-gradient {
+  background:
+    radial-gradient(at 0% 0%, hsla(260, 80%, 40%, 0.1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(240, 80%, 40%, 0.1) 0, transparent 50%),
+    radial-gradient(at 50% 50%, hsla(330, 80%, 40%, 0.05) 0, transparent 50%);
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Prism Border Utility */
+.prism-border {
+  position: relative;
+  background: linear-gradient(#030303, #030303) padding-box,
+    linear-gradient(225deg, #8b5cf6, #f43f5e, #6366f1) border-box;
+  border: 1px solid transparent;
+}
+
+/* Ultra-Sleek Grid */
+.bg-grid-premium {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(circle at center, black, transparent 90%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
