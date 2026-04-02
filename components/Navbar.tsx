@@ -66,21 +66,23 @@ export default function Navbar() {
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className="hidden md:flex items-center gap-4">
-                        <a
-                            href="https://github.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hidden p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                        >
-                            <Github size={20} className="text-neutral-500 group-hover:text-white transition-colors" />
-                        </a>
+                    <div className="hidden md:flex items-center gap-3">
                         <Link href="/beta" className="relative group px-6 py-2.5 rounded-xl overflow-hidden block">
                             <div className="absolute inset-0 bg-white text-black transition-transform duration-500 group-hover:scale-105" />
-                            <span className="relative z-10 text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 text-black">
+                            <span className="relative z-10 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 text-black">
                                 Join the beta <ArrowRight size={14} />
                             </span>
                         </Link>
+                        <a
+                            href="https://github.com/hyperion-hq/hyperion"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative group px-6 py-2.5 rounded-xl overflow-hidden block bg-white text-black transition-all hover:scale-105 active:scale-95"
+                        >
+                            <span className="relative z-10 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+                                <Github size={14} /> GitHub
+                            </span>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}

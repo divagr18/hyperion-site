@@ -86,7 +86,7 @@ export default function Hero() {
                         initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.3 }}
-                        className="flex flex-wrap gap-4"
+                        className="flex flex-wrap items-center gap-4"
                     >
                         <a href="/beta" className="group relative px-8 py-4 bg-white text-black font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.2)] inline-block">
                             <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-rose-400 opacity-0 group-hover:opacity-20 transition-opacity" />
@@ -95,12 +95,14 @@ export default function Hero() {
                             </span>
                         </a>
                         <a
-                            href="https://github.com"
+                            href="https://github.com/hyperion-hq/hyperion"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hidden px-8 py-4 glass-premium rounded-2xl font-bold text-white border border-white/10 hover:bg-white/5 transition-all items-center gap-2 group active:scale-95"
+                            className="group relative px-8 py-4 bg-white text-black font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block"
                         >
-                            <Github size={18} className="group-hover:scale-110 transition-transform" /> View GitHub
+                            <span className="relative z-10 text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 text-black">
+                                <Github size={16} /> GitHub
+                            </span>
                         </a>
                     </motion.div>
                 </div>
