@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const docsDirectory = path.join(process.cwd(), "..", "docs");
+const docsDirectory = path.join(process.cwd(), "docs");
 
 export interface DocContent {
   slug: string;
@@ -43,6 +43,10 @@ export function getDocBySlug(slug: string): DocContent | null {
 }
 
 export function getAllDocSlugs(dir: string = docsDirectory): string[] {
+  if (!fs.existsSync(dir)) {
+    console.warn(`Warning: Directory not found: ${dir}`);
+    return [];
+  }
   const slugs: string[] = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
 
