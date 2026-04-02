@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import ProviderLogos from "@/components/ProviderLogos";
 import BentoFeatures from "@/components/BentoFeatures";
 import SpeedSection from "@/components/PerformanceChart";
+import ComparisonSection from "@/components/ComparisonSection";
 import NeuralCaching from "@/components/NeuralCaching";
 import APIKeyManagement from "@/components/APIKeyManagement";
 import Footer from "@/components/Footer";
@@ -52,6 +53,10 @@ export default function HomeClient() {
                 </div>
 
                 <Hero />
+
+                <div className="py-8">
+                    <ComparisonSection />
+                </div>
 
                 <section className="relative z-10">
                     <ProviderLogos />

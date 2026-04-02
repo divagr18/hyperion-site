@@ -82,8 +82,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/hyperionbig.png",
-    shortcut: "/hyperionbig.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/hyperionbig.png",
   },
 };
