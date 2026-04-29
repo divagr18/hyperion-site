@@ -104,6 +104,14 @@ export default function Hero() {
                                 <Github size={16} /> GitHub
                             </span>
                         </a>
+                        <a 
+                            href="https://www.scrolllaunch.com/products/hyperion?utm_source=badge&utm_medium=embed&utm_campaign=hyperion&ref=scrolllaunch" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="transition-all hover:scale-105 active:scale-95 inline-block"
+                        >
+                            <img src="https://www.scrolllaunch.com/api/badge/hyperion" alt="Featured on ScrollLaunch" width="220" height="48" loading="lazy" />
+                        </a>
                     </motion.div>
                 </div>
 
